@@ -35,6 +35,7 @@ var ACCELERATION = 600;
 var DRAG = 400;
 var MAXSPEED = 400;
 
+
 game.create = function () {
 
   // The scrolling starfield
@@ -153,6 +154,7 @@ function death() {
     return;
   }
   player.alive = false;
+
   game.time.events.remove(this.timer);
   lamp.forEachAlive(function(lamp){
     lamp.body.velocity.x = 0;
@@ -217,6 +219,20 @@ function collectSake3(player,sake) {
 
 function restartGame(){
   game.state.start('game');
+
 }
+
+//fi - game over (pending - don't want to mess with owner of game.js)
+// set true to clearing the display
+// set false to clear the cache
+// init drunkScore in gameover.js
+function gameOver() {
+  this.game.state.start('gameover',true,false,drunkScore);
+
+}
+
+
+
+
 
 module.exports = game;

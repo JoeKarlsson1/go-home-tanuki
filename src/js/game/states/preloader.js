@@ -31,6 +31,11 @@ preloader.preload = function () {
   this.game.load.image('splash-phone', 'images/splash/phone.png');
   this.game.load.image('splash-message-box', 'images/splash/phone-message.png');
 
+
+  //fi for gameover state (pending finalization of picture)
+  this.game.load.image('gameover', 'images/gameover.png');
+
+
 };
 
 
