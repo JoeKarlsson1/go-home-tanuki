@@ -13,10 +13,10 @@ load.prototype.create = function() {
 };
 
 load.prototype.update = function() {
-  this.time.events.add( Phaser.Timer.SECOND * 0.5, this.checkmarkFunc, this );
-  this.time.events.add( Phaser.Timer.SECOND * 1, this.checkmarkFunc2, this );
-  this.time.events.add( Phaser.Timer.SECOND * 1.5, this.underlineFunc, this );
-  this.time.events.add( Phaser.Timer.SECOND * 2.5, this.loadSplash, this );
+  this.time.events.add( Phaser.Timer.SECOND * 0.75, this.checkmarkFunc, this );
+  this.time.events.add( Phaser.Timer.SECOND * 1.5, this.checkmarkFunc2, this );
+  this.time.events.add( Phaser.Timer.SECOND * 2.25, this.underlineFunc, this );
+  this.time.events.add( Phaser.Timer.SECOND * 3.5, this.loadSplash, this );
 };
 
 module.exports = load;
