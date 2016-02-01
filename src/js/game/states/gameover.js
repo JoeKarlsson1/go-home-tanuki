@@ -1,16 +1,29 @@
 var gameOver = function(game){}
- 
+
 gameOver.prototype = {
-    init: function(drunkScore){
-        alert('You scored: '+drunkScore);
+
+    preload : function() {
+        // Load the needed image for this game screen.
+        this.game.load.image('gameover', 'images/gameover.png');
     },
-    create: function(){
-        var gameOverTitle = this.game.add.sprite(160,160,'gameover');
-        gameOverTitle.anchor.setTo(0.5,0.5);
-        var playButton = this.game.add.button(160,320,'play',this.restartGame,this);
-        playButton.anchor.setTo(0.5,0.5);
+
+    create : function() {
+
+        // Create button to start game like in Menu.
+        this.add.button(0, 0, 'gameover', this.startGame, this);
+
+        // Add text with information about the score from last game.
+        this.game.add.text(235, 350, 'LAST SCORE', { font: 'bold 16px sans-serif', fill: '#46c0f9', align: 'center'});
+        this.game.add.text(350, 348, this.drunkMeter.toString(), { font: 'bold 20px sans-serif', fill: '#fff', align: 'center' });
+
     },
-    restartGame: function(){
-        this.game.state.start('game');
+
+    startGame: function () {
+
+        // Change the state back to Game.
+        this.state.start('game');
+
     }
 };
+
+
