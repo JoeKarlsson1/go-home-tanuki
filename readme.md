@@ -1,6 +1,8 @@
 # Go Home Tankuki (You're Drunk)
 ### A Phaser.js game
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/JoeKarlsson/go-home-tanuki.svg)](https://greenkeeper.io/)
+
 The fox-like Tanuki often appears in Japanese folklore as a shape-shifter with supernatural powers and mischievous tendencies, and is the protagonist of our game.
 
 Go Home Tanuki (You're Drunk) was created at Global Game Jam 2016 and uses the theme "Ritual" to exemplify the results of a demanding work ethic common in Japan. Tanuki spends his days working, drinking, going home, repeat - and the player's job is to make sure he gets home safely, at least for tonight.
